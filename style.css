@@ -1,0 +1,210 @@
+/* font-family: "Hanken Grotesk", sans-serif */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    height: 100vh;
+}
+
+div.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header {
+   text-align: center;
+   background: linear-gradient(0deg, hsl(241, 81%, 54%), hsla(241, 81%, 54%, 0.8));
+   border-radius: 0 0 25px 25px;
+}
+
+header h1 {
+    color: white;
+    opacity: 0.6;
+    font-size: 24px;
+    padding: 20px 0;
+}
+
+header div.score {
+    height: 150px;
+    width: 150px;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    border-radius: 50%;
+    background: linear-gradient(0deg, hsla(241, 72%, 46%, 0), hsl(241, 81%, 54%));
+    margin: 0 auto;
+}
+
+header div.score p {
+    padding-top: 25px;
+}
+
+header div.score span {
+    display: block;
+    padding-bottom: 15px;
+    font-size: 20px;
+    opacity: 0.4;
+    text-align: center;
+}
+
+header h2 {
+    color: white;
+    padding: 15px 0;
+}
+
+header p {
+    color: white;
+    opacity: 0.6;
+    width: 100%;
+    padding: 0 30px 30px
+}
+
+header p.result {
+    opacity: 1;
+}
+
+main {
+    margin: 20px 25px;
+    flex-grow: 1;
+}
+
+main>table  {
+    width: 100%;
+    margin: 25px 0;
+}
+
+main>table tr {
+    display: flex;
+    width: 100%;
+    border-radius: 5px;
+    padding: 18px 15px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+main>table tr:nth-child(1) {
+    background-color: hsla(0, 100%, 67%, 0.1);
+    color: hsl(0, 100%, 67%);
+}
+
+main>table tr:nth-child(2) {
+    background-color: hsla(39, 100%, 56%, 0.1);
+    color: hsl(39, 100%, 56%);
+}
+
+main>table tr:nth-child(3) {
+    background-color: hsla(166, 100%, 37%, 0.1);
+    color: hsl(166, 100%, 37%);
+}
+
+main>table tr:nth-child(4) {
+    background-color: hsla(234, 85%, 45%, 0.1);
+    margin-bottom: 0;
+    color: hsl(234, 85%, 45%);
+}
+
+main table td {
+    width: 50%;
+}
+
+main table td svg {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+main table td.score {
+    display: flex;
+    justify-content: flex-end;
+    color: black;
+    font-weight: bold;
+}
+
+main table td.score span {
+    color: black;
+    opacity: 0.3;
+    margin-left: 8px;
+}
+
+main button {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px 0;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    background-color: hsl(224, 30%, 27%);
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+main button:hover {
+    background: linear-gradient(0deg, hsl(241, 81%, 54%), hsla(241, 81%, 54%, 0.8));
+}
+
+@media (min-width: 1024px) {
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.wrapper { 
+        display: flex;
+        flex-direction: row;
+        width: 72%;
+        height: 65%;
+        box-shadow: 10px 8px 15px rgba(0, 0, 0, 0.2);
+        border-radius: 0 25px 25px 0;
+    }
+    header {
+        text-align: center;
+        background: linear-gradient(0deg, hsl(241, 81%, 54%), hsla(241, 81%, 54%, 0.8));
+        border-radius: 25px;
+        flex-basis: 50%;
+    }
+
+    main {
+        margin: 20px 35px;
+        flex-grow: 1;
+    }
+
+    header div.score p.result {
+        padding: 0;
+    }
+
+    header div.score {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 180px;
+        width: 180px;
+        vertical-align: middle;
+        margin-bottom: 20px;
+    }
+
+    header div.score span {
+        padding: 0;
+    }
+    
+    header p {
+        padding: 0px 75px; 
+    }
+    
+}
+
+
+@media (min-width: 1440px) {
+    div.wrapper { 
+        width: 50%;
+        height: 65%;
+    }
+}
