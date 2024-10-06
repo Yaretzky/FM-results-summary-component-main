@@ -14,7 +14,7 @@ body {
 div.wrapper {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    min-width: 320px;
 }
 
 header {
@@ -31,10 +31,14 @@ header h1 {
 }
 
 header div.score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 150px;
     width: 150px;
     color: white;
-    font-size: 50px;
+    font-size: 60px;
     font-weight: bold;
     border-radius: 50%;
     background: linear-gradient(0deg, hsla(241, 72%, 46%, 0), hsl(241, 81%, 54%));
@@ -42,27 +46,26 @@ header div.score {
 }
 
 header div.score p {
-    padding-top: 25px;
+    padding: 0;
 }
 
 header div.score span {
     display: block;
-    padding-bottom: 15px;
-    font-size: 20px;
+    font-size: 16px;
     opacity: 0.4;
-    text-align: center;
+    text-align: center; */
 }
 
 header h2 {
     color: white;
-    padding: 15px 0;
+    padding: 5px 0 15px;
 }
 
 header p {
     color: white;
     opacity: 0.6;
     width: 100%;
-    padding: 0 30px 30px
+    padding: 0 50px 30px
 }
 
 header p.result {
@@ -83,7 +86,7 @@ main>table tr {
     display: flex;
     width: 100%;
     border-radius: 5px;
-    padding: 18px 15px;
+    padding: 13px 12px;
     margin-bottom: 15px;
     align-items: center;
 }
@@ -105,12 +108,13 @@ main>table tr:nth-child(3) {
 
 main>table tr:nth-child(4) {
     background-color: hsla(234, 85%, 45%, 0.1);
-    margin-bottom: 0;
+    margin-bottom: 10px;
     color: hsl(234, 85%, 45%);
 }
 
 main table td {
     width: 50%;
+    font-weight: 700;
 }
 
 main table td svg {
@@ -140,7 +144,7 @@ main button {
     border-radius: 25px;
     color: white;
     background-color: hsl(224, 30%, 27%);
-    font-size: 20px;
+    font-size: 16px;
     cursor: pointer;
     transition: 0.2s;
 }
@@ -148,6 +152,23 @@ main button {
 main button:hover {
     background: linear-gradient(0deg, hsl(241, 81%, 54%), hsla(241, 81%, 54%, 0.8));
 }
+
+
+@media (min-width: 768px) {
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    div.wrapper { 
+        margin-top: 50px;
+        max-width: 60%;
+    }
+}
+
 
 @media (min-width: 1024px) {
 
@@ -160,10 +181,11 @@ main button:hover {
     div.wrapper { 
         display: flex;
         flex-direction: row;
-        width: 72%;
-        height: 65%;
+        width: 60%;
         box-shadow: 10px 8px 15px rgba(0, 0, 0, 0.2);
         border-radius: 0 25px 25px 0;
+        margin-top: 0;
+
     }
     header {
         text-align: center;
@@ -173,7 +195,7 @@ main button:hover {
     }
 
     main {
-        margin: 20px 35px;
+        margin: 20px 35px 40px;
         flex-grow: 1;
     }
 
@@ -188,7 +210,7 @@ main button:hover {
         height: 180px;
         width: 180px;
         vertical-align: middle;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     header div.score span {
@@ -196,15 +218,66 @@ main button:hover {
     }
     
     header p {
-        padding: 0px 75px; 
+       padding: 0 40px 25px;
+    }
+
+    header h1 {
+        margin: 30px 0 15px;
+    }
+
+    main h3 {
+        margin: 30px 0;
     }
     
 }
 
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
     div.wrapper { 
-        width: 50%;
-        height: 65%;
+        margin-top: 50px;
+        max-width: 60%;
     }
 }
+
+
+@media (min-width: 1440px) {
+
+    div.wrapper { 
+        width: 50%;
+    }
+
+    header p {
+        padding: 0 65px 25px;
+     }
+}
+
+@media (min-width: 1440px) {
+
+    div.wrapper { 
+        width: 50%;
+    }
+
+    header p {
+        padding: 0 65px 25px;
+     }
+}
+
+
+@media (min-width: 1920px) {
+
+    div.wrapper { 
+        width: 40%;
+    }
+
+    header p {
+       padding: 0 75px 35px;
+    }
+
